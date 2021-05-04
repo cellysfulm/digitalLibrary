@@ -1,0 +1,36 @@
+<p>my-books works!</p>
+<table class="table" >
+    <thead class="table-primary">
+        <tr> 
+            <th scope="col">temas</th>
+            <th scope="col">tipo</th>
+            <th scope="col">autor</th>
+            <th scope="col">titulo</th>
+            <th scope="col">edicion</th>
+            <th scope="col">copias</th>
+            <th scope="col">descripcion</th>
+            <th scope="col">disponibles</th>
+            <th scope="col">ejemplares</th>
+            <th scope="col">frecuencia</th>
+            <th scope="col">Options</th>
+          </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let boo of books"> 
+            <td>{{boo.temas}}</td>
+            <td>{{boo.tipo}}</td>
+            <td>{{boo.autor}}</td>
+            <td>{{boo.titulo}}</td>
+            <td>{{boo.edicion}}</td>
+            <td>{{boo.copias}}</td>
+            <td>{{boo.descripcion}}</td>
+            <td>{{boo.disponibles}}</td>
+            <td>{{boo.ejemplares}}</td>
+            <td>{{boo.frecuencia}}</td>
+            <td class="d-flex justify-content-between">
+                <button type="button" class="btn btn-warning btn-short btn-sm" (click)="devolver(boo)">devolver</button> 
+             </td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-success btn-short btn-sm" (click)="regresar()">regresar</button>

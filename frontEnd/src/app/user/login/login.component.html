@@ -1,0 +1,25 @@
+    <div class="container p-4">
+      <div class="d-flex justify-content-center h-100">
+        <div class="card" style="width: 28rem; height: 20rem;">
+          <div class="card-body ">
+            <div class="d-flex justify-content-center h-1">
+              <h1>SIGN IN</h1>
+            </div>
+            <form #frmLogin= "ngForm" class ="login-container" (ngSubmit)="onLogin(frmLogin)">
+              <div class="input-group form-group">
+                <input type="text" class="form-control" id="exampleInputEmail1" name ="email" placeholder="Email" ngModel required>
+              </div>
+              <div class="input-group form-group">
+               
+                <input type="password" class="form-control" id="exampleInputPassword1"name="password" placeholder="Password" ngModel required>
+              </div>
+              <div class="form-group justify-content-center h-100">
+                <button type="submit" value="Login" class="btn btn-warning" >SIGN IN</button>
+                <input type="button" value="Cancel" class="btn float-right  btn-dark">
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>

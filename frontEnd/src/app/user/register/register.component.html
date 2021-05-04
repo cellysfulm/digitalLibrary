@@ -1,0 +1,24 @@
+<div class="container p-4">
+    <form #frmRegister="ngForm" (ngSubmit)="register(frmRegister)"> 
+        <div class="form-group">
+          <input type="text" name="email" class="form-control" id="exampleInputEmail1"  placeholder="email" #email="ngModel" [(ngModel)]="authService.selectedUser.email" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1"  placeholder="name" #name="ngModel" [(ngModel)]="authService.selectedUser.name" required>
+          </div>
+        <div class="form-group">
+          <input type="text" name="lastname" class="form-control" id="exampleInputPassword1" placeholder="lastname" #lastname="ngModel" [(ngModel)]="authService.selectedUser.lastname" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="rol" class="form-control" id="exampleInputEmail1"  placeholder="rol" #rol="ngModel" [(ngModel)]="authService.selectedUser.rol" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="carnet" class="form-control" id="exampleInputEmail1"  placeholder="carnet" #carnet="ngModel" [(ngModel)]="authService.selectedUser.carnet" required>
+          </div>
+          <div class="d-flex justify-content-around ">
+
+            <button type="submit" class="btn btn-success">Agregar</button>
+            <a href="/bilioteca/readusers" class="btn btn-danger">Cancelar</a>
+          </div>
+      </form>
+</div>

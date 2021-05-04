@@ -1,0 +1,32 @@
+<div class="container p-4">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card" style="width: 28rem; height: 20rem;">
+        <div class="card-body ">
+          <div class="d-flex justify-content-center h-1">
+            <h1>Devolver Libro</h1>
+          </div>
+          <div class="d-flex justify-content-center h-1"> 
+            <div class="container p-4 ">
+           <h4>{{title}}</h4>
+           <h6>de  {{aur}}</h6>
+                <form #frmUpdate="ngForm" (ngSubmit)="devolver(frmUpdate)"> 
+                    <div class="form-group">
+                        <input type="hidden" name="bookId" class="form-control"   placeholder="bookId" #bookId="ngModel" [(ngModel)]="subs" required>
+                      </div>
+                      <br>
+                      <br>
+                      <br>
+                      <div class="d-flex justify-content-around ">
+                        
+                        <button type="submit" class="btn btn-success">devolver</button>
+                        <a href="bilioteca/readbooks" class="btn btn-danger">Cancelar</a>
+                      </div>
+                  </form>
+            </div>  
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  

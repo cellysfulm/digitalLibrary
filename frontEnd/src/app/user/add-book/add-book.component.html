@@ -1,0 +1,40 @@
+
+<div class="container p-4">
+    <form #frmAddBook="ngForm" (ngSubmit)="newBook(frmAddBook)"> 
+        <div class="form-group">
+          <input type="text" name="email" class="form-control" id="exampleInputEmail1"  placeholder="Palabras clave" #pclave="ngModel" [(ngModel)]="authService.selectedBook.pclave" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1"  placeholder="temas" #temas="ngModel" [(ngModel)]="authService.selectedBook.temas" required>
+          </div>
+        <div class="form-group">
+          <input type="text" name="tipo" class="form-control" id="exampleInputPassword1" placeholder="tipo" #tipo="ngModel" [(ngModel)]="authService.selectedBook.tipo" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="autor" class="form-control" id="exampleInputEmail1"  placeholder="autor" #autor="ngModel" [(ngModel)]="authService.selectedBook.autor" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="titulo" class="form-control" id="exampleInputEmail1"  placeholder="titulo" #titulo="ngModel" [(ngModel)]="authService.selectedBook.titulo" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" class="form-control" id="exampleInputEmail1"  placeholder="edicion" #edicion="ngModel" [(ngModel)]="authService.selectedBook.edicion" required>
+          </div>
+          <div class="form-group">
+              <input type="text" name="name" class="form-control" id="exampleInputEmail1"  placeholder="descripcion" #descripcion="ngModel" [(ngModel)]="authService.selectedBook.descripcion" required>
+            </div>
+          <div class="form-group">
+            <input type="text" name="tipo" class="form-control" id="exampleInputPassword1" placeholder="copias" #copias="ngModel" [(ngModel)]="authService.selectedBook.copias" required>
+          </div>
+            <div class="form-group">
+              <input type="text" name="titulo" class="form-control" id="exampleInputEmail1"  placeholder="ejemplares" #ejemplares="ngModel" [(ngModel)]="authService.selectedBook.ejemplares" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="titulo" class="form-control" id="exampleInputEmail1"  placeholder="frecuencia" #frecuencia="ngModel" [(ngModel)]="authService.selectedBook.frecuencia" required>
+              </div>
+          <div class="d-flex justify-content-around ">
+
+            <button type="submit" class="btn btn-success">Agregar</button>
+            <a href="home/readbooks" class="btn btn-danger">Cancelar</a>
+          </div>
+      </form>
+</div>
